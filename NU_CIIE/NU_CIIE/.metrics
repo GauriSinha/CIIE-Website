@@ -1,0 +1,51 @@
+{
+    "files": {
+        "__init__.py": {
+            "block_positions": [],
+            "comments": 0,
+            "language": "Python",
+            "mccabe": 0,
+            "ratio_comment_to_code": 0.0,
+            "sloc": 0,
+            "test_coverage": 100.0
+        },
+        "metrics.txt": {
+            "block_positions": [],
+            "comments": 0,
+            "language": "Text only",
+            "mccabe": 0,
+            "ratio_comment_to_code": 0.0,
+            "sloc": 0
+        },
+        "settings.py": {
+            "block_positions": [],
+            "comments": 38,
+            "language": "Python",
+            "mccabe": 0,
+            "ratio_comment_to_code": 0.48,
+            "sloc": 79,
+            "test_coverage": 0.0,
+            "test_missing": "13-162"
+        },
+        "urls.py": {
+            "block_positions": [],
+            "comments": 16,
+            "language": "Python",
+            "mccabe": 0,
+            "ratio_comment_to_code": 2.0,
+            "sloc": 8,
+            "test_coverage": 0.0,
+            "test_missing": "17-21"
+        },
+        "wsgi.py": {
+            "block_positions": [],
+            "comments": 8,
+            "language": "Python",
+            "mccabe": 0,
+            "ratio_comment_to_code": 2.0,
+            "sloc": 4,
+            "test_coverage": 0.0,
+            "test_missing": "10-16"
+        }
+    }
+}

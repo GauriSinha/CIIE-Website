@@ -1,0 +1,939 @@
+{
+    "files": {
+        "__init__.py": {
+            "block_positions": [],
+            "comments": 0,
+            "language": "Python",
+            "mccabe": 0,
+            "ratio_comment_to_code": 0.0,
+            "sloc": 0,
+            "test_coverage": 100.0
+        },
+        "admin.py": {
+            "block_positions": [
+                {
+                    "end": 6,
+                    "name": "EventUser",
+                    "start": 6,
+                    "type": "Class"
+                }
+            ],
+            "comments": 2,
+            "language": "Python",
+            "mccabe": 0,
+            "ratio_comment_to_code": 0.29,
+            "sloc": 7,
+            "test_coverage": 0.0,
+            "test_missing": "1-11"
+        },
+        "apps.py": {
+            "block_positions": [
+                {
+                    "end": 4,
+                    "name": "UserprofilesConfig",
+                    "start": 4,
+                    "type": "Class"
+                }
+            ],
+            "comments": 0,
+            "language": "Python",
+            "mccabe": 0,
+            "ratio_comment_to_code": 0.0,
+            "sloc": 3,
+            "test_coverage": 0.0,
+            "test_missing": "1-5"
+        },
+        "forms.py": {
+            "block_positions": [
+                {
+                    "end": 14,
+                    "name": "UserForm",
+                    "start": 14,
+                    "type": "Class"
+                },
+                {
+                    "end": 17,
+                    "name": "Meta",
+                    "start": 17,
+                    "type": "Class"
+                },
+                {
+                    "end": 26,
+                    "name": "UserProfileForm",
+                    "start": 26,
+                    "type": "Class"
+                },
+                {
+                    "end": 28,
+                    "name": "Meta",
+                    "start": 28,
+                    "type": "Class"
+                },
+                {
+                    "end": 37,
+                    "name": "UserProfileEditForm",
+                    "start": 37,
+                    "type": "Class"
+                },
+                {
+                    "end": 38,
+                    "name": "Meta",
+                    "start": 38,
+                    "type": "Class"
+                }
+            ],
+            "comments": 0,
+            "language": "Python",
+            "mccabe": 0,
+            "ratio_comment_to_code": 0.0,
+            "sloc": 42,
+            "test_coverage": 0.0,
+            "test_missing": "1-41"
+        },
+        "metrics.txt": {
+            "block_positions": [],
+            "comments": 0,
+            "language": "Text only",
+            "mccabe": 0,
+            "ratio_comment_to_code": 0.0,
+            "sloc": 0
+        },
+        "models.py": {
+            "block_positions": [
+                {
+                    "end": 10,
+                    "name": "Event",
+                    "start": 10,
+                    "type": "Class"
+                },
+                {
+                    "end": 24,
+                    "name": "UserProfile",
+                    "start": 23,
+                    "type": "Class"
+                }
+            ],
+            "comments": 1,
+            "language": "Python",
+            "mccabe": 1,
+            "ratio_comment_to_code": 0.03,
+            "sloc": 37,
+            "test_coverage": 0.0,
+            "test_missing": "1-47"
+        },
+        "static/userprofiles/main.css": {
+            "block_positions": [
+                {
+                    "end": 19,
+                    "name": "navbar-custom",
+                    "start": 17,
+                    "type": "Class"
+                },
+                {
+                    "end": 20,
+                    "name": "navbar-fixed-top",
+                    "start": 21,
+                    "type": "Class"
+                },
+                {
+                    "end": 24,
+                    "name": "scrolled",
+                    "start": 21,
+                    "type": "Class"
+                },
+                {
+                    "end": 32,
+                    "name": "navbar-custom",
+                    "start": 26,
+                    "type": "Class"
+                },
+                {
+                    "end": 36,
+                    "name": "navbar-brand",
+                    "start": 34,
+                    "type": "Class"
+                },
+                {
+                    "end": 40,
+                    "name": "nav",
+                    "start": 38,
+                    "type": "Class"
+                },
+                {
+                    "end": 44,
+                    "name": "nav",
+                    "start": 42,
+                    "type": "Class"
+                },
+                {
+                    "end": 49,
+                    "name": "nav",
+                    "start": 46,
+                    "type": "Class"
+                },
+                {
+                    "end": 79,
+                    "name": "img-responsive",
+                    "start": 76,
+                    "type": "Class"
+                },
+                {
+                    "end": 84,
+                    "name": "buttons",
+                    "start": 82,
+                    "type": "Class"
+                },
+                {
+                    "end": 93,
+                    "name": "btn",
+                    "start": 86,
+                    "type": "Class"
+                },
+                {
+                    "end": 94,
+                    "name": "btn-half",
+                    "start": 95,
+                    "type": "Class"
+                },
+                {
+                    "end": 98,
+                    "name": "btn-full",
+                    "start": 95,
+                    "type": "Class"
+                },
+                {
+                    "end": 99,
+                    "name": "btn-half",
+                    "start": 100,
+                    "type": "Class"
+                },
+                {
+                    "end": 104,
+                    "name": "btn-full",
+                    "start": 100,
+                    "type": "Class"
+                },
+                {
+                    "end": 115,
+                    "name": "copy",
+                    "start": 110,
+                    "type": "Class"
+                },
+                {
+                    "end": 155,
+                    "name": "features",
+                    "start": 151,
+                    "type": "Class"
+                },
+                {
+                    "end": 159,
+                    "name": "arranging",
+                    "start": 157,
+                    "type": "Class"
+                },
+                {
+                    "end": 163,
+                    "name": "features",
+                    "start": 161,
+                    "type": "Class"
+                },
+                {
+                    "end": 174,
+                    "name": "photo-showcase",
+                    "start": 170,
+                    "type": "Class"
+                },
+                {
+                    "end": 180,
+                    "name": "photo-showcase",
+                    "start": 176,
+                    "type": "Class"
+                },
+                {
+                    "end": 186,
+                    "name": "meal-photo",
+                    "start": 182,
+                    "type": "Class"
+                },
+                {
+                    "end": 193,
+                    "name": "meal-photo",
+                    "start": 188,
+                    "type": "Class"
+                },
+                {
+                    "end": 198,
+                    "name": "meal-photo",
+                    "start": 195,
+                    "type": "Class"
+                },
+                {
+                    "end": 211,
+                    "name": "pic",
+                    "start": 207,
+                    "type": "Class"
+                },
+                {
+                    "end": 215,
+                    "name": "work-steps",
+                    "start": 213,
+                    "type": "Class"
+                },
+                {
+                    "end": 219,
+                    "name": "work-steps",
+                    "start": 217,
+                    "type": "Class"
+                },
+                {
+                    "end": 229,
+                    "name": "work-steps",
+                    "start": 221,
+                    "type": "Class"
+                },
+                {
+                    "end": 233,
+                    "name": "clearfix",
+                    "start": 231,
+                    "type": "Class"
+                },
+                {
+                    "end": 241,
+                    "name": "clearfix",
+                    "start": 235,
+                    "type": "Class"
+                },
+                {
+                    "end": 253,
+                    "name": "photoGalary",
+                    "start": 249,
+                    "type": "Class"
+                },
+                {
+                    "end": 264,
+                    "name": "team",
+                    "start": 255,
+                    "type": "Class"
+                },
+                {
+                    "end": 265,
+                    "name": "team",
+                    "start": 266,
+                    "type": "Class"
+                },
+                {
+                    "end": 268,
+                    "name": "space",
+                    "start": 266,
+                    "type": "Class"
+                },
+                {
+                    "end": 275,
+                    "name": "team",
+                    "start": 270,
+                    "type": "Class"
+                },
+                {
+                    "end": 281,
+                    "name": "team",
+                    "start": 277,
+                    "type": "Class"
+                },
+                {
+                    "end": 285,
+                    "name": "customer_name",
+                    "start": 283,
+                    "type": "Class"
+                },
+                {
+                    "end": 289,
+                    "name": "img-center",
+                    "start": 287,
+                    "type": "Class"
+                },
+                {
+                    "end": 293,
+                    "name": "button",
+                    "start": 291,
+                    "type": "Class"
+                },
+                {
+                    "end": 303,
+                    "name": "btn2",
+                    "start": 295,
+                    "type": "Class"
+                },
+                {
+                    "end": 308,
+                    "name": "btn2-full",
+                    "start": 305,
+                    "type": "Class"
+                },
+                {
+                    "end": 315,
+                    "name": "btn2-full",
+                    "start": 310,
+                    "type": "Class"
+                },
+                {
+                    "end": 319,
+                    "name": "form",
+                    "start": 317,
+                    "type": "Class"
+                },
+                {
+                    "end": 320,
+                    "name": "form",
+                    "start": 321,
+                    "type": "Class"
+                },
+                {
+                    "end": 323,
+                    "name": "container",
+                    "start": 321,
+                    "type": "Class"
+                },
+                {
+                    "end": 329,
+                    "name": "footer",
+                    "start": 325,
+                    "type": "Class"
+                }
+            ],
+            "comments": 16,
+            "language": "CSS",
+            "mccabe": 0,
+            "ratio_comment_to_code": 0.06,
+            "sloc": 248,
+            "test_coverage": 0.0,
+            "test_missing": "all"
+        },
+        "static/userprofiles/main.js": {
+            "block_positions": [],
+            "comments": 10,
+            "language": "JavaScript",
+            "mccabe": 5,
+            "ratio_comment_to_code": 0.2,
+            "sloc": 49,
+            "test_coverage": 0.0,
+            "test_missing": "all"
+        },
+        "static/userprofiles/register.css": {
+            "block_positions": [
+                {
+                    "end": 23,
+                    "name": "form_bg",
+                    "start": 10,
+                    "type": "Class"
+                },
+                {
+                    "end": 26,
+                    "name": "align-center",
+                    "start": 24,
+                    "type": "Class"
+                },
+                {
+                    "end": 30,
+                    "name": "space",
+                    "start": 28,
+                    "type": "Class"
+                },
+                {
+                    "end": 32,
+                    "name": "custom-select",
+                    "start": 32,
+                    "type": "Class"
+                },
+                {
+                    "end": 32,
+                    "name": "custom-select",
+                    "start": 33,
+                    "type": "Class"
+                },
+                {
+                    "end": 36,
+                    "name": "is-valid",
+                    "start": 33,
+                    "type": "Class"
+                },
+                {
+                    "end": 48,
+                    "name": "sub",
+                    "start": 43,
+                    "type": "Class"
+                },
+                {
+                    "end": 58,
+                    "name": "pics",
+                    "start": 52,
+                    "type": "Class"
+                },
+                {
+                    "end": 66,
+                    "name": "briefIntro",
+                    "start": 59,
+                    "type": "Class"
+                },
+                {
+                    "end": 70,
+                    "name": "briefIntro",
+                    "start": 67,
+                    "type": "Class"
+                }
+            ],
+            "comments": 0,
+            "language": "CSS",
+            "mccabe": 0,
+            "ratio_comment_to_code": 0.0,
+            "sloc": 65,
+            "test_coverage": 0.0,
+            "test_missing": "all"
+        },
+        "templates/base.html": {
+            "block_positions": [],
+            "comments": 0,
+            "language": "HTML",
+            "mccabe": 0,
+            "ratio_comment_to_code": 0.0,
+            "sloc": 7,
+            "test_coverage": 0.0,
+            "test_missing": "all"
+        },
+        "templates/community/base.html": {
+            "block_positions": [],
+            "comments": 3,
+            "language": "HTML",
+            "mccabe": 0,
+            "ratio_comment_to_code": 0.21,
+            "sloc": 14,
+            "test_coverage": 0.0,
+            "test_missing": "all"
+        },
+        "templates/community/components/navbar.html": {
+            "block_positions": [],
+            "comments": 17,
+            "language": "HTML",
+            "mccabe": 0,
+            "ratio_comment_to_code": 0.41,
+            "sloc": 41,
+            "test_coverage": 0.0,
+            "test_missing": "all"
+        },
+        "templates/error.html": {
+            "block_positions": [],
+            "comments": 0,
+            "language": "HTML",
+            "mccabe": 0,
+            "ratio_comment_to_code": 0.0,
+            "sloc": 2,
+            "test_coverage": 0.0,
+            "test_missing": "all"
+        },
+        "templates/event_list_admin.html": {
+            "block_positions": [],
+            "comments": 0,
+            "language": "HTML",
+            "mccabe": 0,
+            "ratio_comment_to_code": 0.0,
+            "sloc": 10,
+            "test_coverage": 0.0,
+            "test_missing": "all"
+        },
+        "templates/global_components/django_messages.html": {
+            "block_positions": [],
+            "comments": 0,
+            "language": "HTML",
+            "mccabe": 0,
+            "ratio_comment_to_code": 0.0,
+            "sloc": 5,
+            "test_coverage": 0.0,
+            "test_missing": "all"
+        },
+        "templates/global_components/form-template.html": {
+            "block_positions": [],
+            "comments": 0,
+            "language": "HTML",
+            "mccabe": 0,
+            "ratio_comment_to_code": 0.0,
+            "sloc": 7,
+            "test_coverage": 0.0,
+            "test_missing": "all"
+        },
+        "templates/global_components/message.html": {
+            "block_positions": [],
+            "comments": 0,
+            "language": "HTML",
+            "mccabe": 0,
+            "ratio_comment_to_code": 0.0,
+            "sloc": 10,
+            "test_coverage": 0.0,
+            "test_missing": "all"
+        },
+        "templates/index.html": {
+            "block_positions": [],
+            "comments": 2350,
+            "language": "HTML",
+            "mccabe": 0,
+            "ratio_comment_to_code": 6.83,
+            "sloc": 344,
+            "test_coverage": 0.0,
+            "test_missing": "all"
+        },
+        "templates/log/base.html": {
+            "block_positions": [],
+            "comments": 43,
+            "language": "HTML",
+            "mccabe": 0,
+            "ratio_comment_to_code": 0.54,
+            "sloc": 80,
+            "test_coverage": 0.0,
+            "test_missing": "all"
+        },
+        "templates/log/message_form.html": {
+            "block_positions": [],
+            "comments": 0,
+            "language": "HTML",
+            "mccabe": 0,
+            "ratio_comment_to_code": 0.0,
+            "sloc": 22,
+            "test_coverage": 0.0,
+            "test_missing": "all"
+        },
+        "templates/log/navbar.html": {
+            "block_positions": [],
+            "comments": 0,
+            "language": "HTML",
+            "mccabe": 0,
+            "ratio_comment_to_code": 0.0,
+            "sloc": 9,
+            "test_coverage": 0.0,
+            "test_missing": "all"
+        },
+        "templates/log/profile_edit_form.html": {
+            "block_positions": [],
+            "comments": 0,
+            "language": "HTML",
+            "mccabe": 0,
+            "ratio_comment_to_code": 0.0,
+            "sloc": 22,
+            "test_coverage": 0.0,
+            "test_missing": "all"
+        },
+        "templates/login.html": {
+            "block_positions": [
+                {
+                    "end": 30,
+                    "name": "form_bg",
+                    "start": 27,
+                    "type": "Class"
+                }
+            ],
+            "comments": 8,
+            "language": "HTML",
+            "mccabe": 0,
+            "ratio_comment_to_code": 0.14,
+            "sloc": 59,
+            "test_coverage": 0.0,
+            "test_missing": "all"
+        },
+        "templates/logout.html": {
+            "block_positions": [],
+            "comments": 0,
+            "language": "HTML",
+            "mccabe": 0,
+            "ratio_comment_to_code": 0.0,
+            "sloc": 2,
+            "test_coverage": 0.0,
+            "test_missing": "all"
+        },
+        "templates/register.html": {
+            "block_positions": [
+                {
+                    "end": 25,
+                    "name": "form_bg",
+                    "start": 22,
+                    "type": "Class"
+                }
+            ],
+            "comments": 22,
+            "language": "HTML",
+            "mccabe": 0,
+            "ratio_comment_to_code": 0.32,
+            "sloc": 69,
+            "test_coverage": 0.0,
+            "test_missing": "all"
+        },
+        "templates/registration/change_password.html": {
+            "block_positions": [],
+            "comments": 0,
+            "language": "HTML",
+            "mccabe": 0,
+            "ratio_comment_to_code": 0.0,
+            "sloc": 3,
+            "test_coverage": 0.0,
+            "test_missing": "all"
+        },
+        "templates/registration/email_activate.html": {
+            "block_positions": [],
+            "comments": 0,
+            "language": "HTML",
+            "mccabe": 0,
+            "ratio_comment_to_code": 0.0,
+            "sloc": 0,
+            "test_coverage": 0.0,
+            "test_missing": "all"
+        },
+        "templates/registration/password_reset_complete.html": {
+            "block_positions": [],
+            "comments": 0,
+            "language": "HTML",
+            "mccabe": 0,
+            "ratio_comment_to_code": 0.0,
+            "sloc": 8,
+            "test_coverage": 0.0,
+            "test_missing": "all"
+        },
+        "templates/registration/password_reset_confirm.html": {
+            "block_positions": [],
+            "comments": 0,
+            "language": "HTML",
+            "mccabe": 0,
+            "ratio_comment_to_code": 0.0,
+            "sloc": 34,
+            "test_coverage": 0.0,
+            "test_missing": "all"
+        },
+        "templates/registration/password_reset_done.html": {
+            "block_positions": [],
+            "comments": 0,
+            "language": "HTML",
+            "mccabe": 0,
+            "ratio_comment_to_code": 0.0,
+            "sloc": 11,
+            "test_coverage": 0.0,
+            "test_missing": "all"
+        },
+        "templates/registration/password_reset_email.html": {
+            "block_positions": [],
+            "comments": 0,
+            "language": "HTML",
+            "mccabe": 0,
+            "ratio_comment_to_code": 0.0,
+            "sloc": 0,
+            "test_coverage": 0.0,
+            "test_missing": "all"
+        },
+        "templates/registration/password_reset_form.html": {
+            "block_positions": [],
+            "comments": 0,
+            "language": "HTML",
+            "mccabe": 0,
+            "ratio_comment_to_code": 0.0,
+            "sloc": 14,
+            "test_coverage": 0.0,
+            "test_missing": "all"
+        },
+        "templates/registration/password_reset_subject.txt": {
+            "block_positions": [],
+            "comments": 0,
+            "language": "Text only",
+            "mccabe": 0,
+            "ratio_comment_to_code": 0.0,
+            "sloc": 0
+        },
+        "templates/registration/user_register.html": {
+            "block_positions": [],
+            "comments": 0,
+            "language": "HTML",
+            "mccabe": 0,
+            "ratio_comment_to_code": 0.0,
+            "sloc": 17,
+            "test_coverage": 0.0,
+            "test_missing": "all"
+        },
+        "templates/show_users.html": {
+            "block_positions": [],
+            "comments": 0,
+            "language": "HTML",
+            "mccabe": 0,
+            "ratio_comment_to_code": 0.0,
+            "sloc": 11,
+            "test_coverage": 0.0,
+            "test_missing": "all"
+        },
+        "templates/userdash.html": {
+            "block_positions": [
+                {
+                    "end": 27,
+                    "name": "form_bg",
+                    "start": 24,
+                    "type": "Class"
+                }
+            ],
+            "comments": 8,
+            "language": "HTML",
+            "mccabe": 0,
+            "ratio_comment_to_code": 0.11,
+            "sloc": 71,
+            "test_coverage": 0.0,
+            "test_missing": "all"
+        },
+        "templates/viewEvent.html": {
+            "block_positions": [
+                {
+                    "end": 31,
+                    "name": "form_bg",
+                    "start": 28,
+                    "type": "Class"
+                }
+            ],
+            "comments": 4,
+            "language": "HTML",
+            "mccabe": 0,
+            "ratio_comment_to_code": 0.1,
+            "sloc": 41,
+            "test_coverage": 0.0,
+            "test_missing": "all"
+        },
+        "tests.py": {
+            "block_positions": [],
+            "comments": 1,
+            "language": "Python",
+            "mccabe": 0,
+            "ratio_comment_to_code": 1.0,
+            "sloc": 1,
+            "test_coverage": 0.0,
+            "test_missing": "1"
+        },
+        "tokens.py": {
+            "block_positions": [
+                {
+                    "end": 11,
+                    "methods": [
+                        {
+                            "end": 11,
+                            "name": "_make_hash_value",
+                            "start": 6,
+                            "type": "Function"
+                        }
+                    ],
+                    "name": "TokenGenerator",
+                    "start": 5,
+                    "type": "Class"
+                }
+            ],
+            "comments": 0,
+            "language": "Python",
+            "mccabe": 0,
+            "ratio_comment_to_code": 0.0,
+            "sloc": 9,
+            "test_coverage": 0.0,
+            "test_missing": "1-11"
+        },
+        "urls.py": {
+            "block_positions": [],
+            "comments": 0,
+            "language": "Python",
+            "mccabe": 0,
+            "ratio_comment_to_code": 0.0,
+            "sloc": 24,
+            "test_coverage": 0.0,
+            "test_missing": "1-8"
+        },
+        "views.py": {
+            "block_positions": [
+                {
+                    "end": 36,
+                    "name": "index",
+                    "start": 36,
+                    "type": "Function"
+                },
+                {
+                    "end": 40,
+                    "name": "login_view",
+                    "start": 40,
+                    "type": "Function"
+                },
+                {
+                    "end": 92,
+                    "name": "change_password",
+                    "start": 78,
+                    "type": "Function"
+                },
+                {
+                    "end": 93,
+                    "name": "logout_view",
+                    "start": 93,
+                    "type": "Function"
+                },
+                {
+                    "end": 98,
+                    "name": "userDash",
+                    "start": 98,
+                    "type": "Function"
+                },
+                {
+                    "end": 108,
+                    "name": "viewEvent",
+                    "start": 108,
+                    "type": "Function"
+                },
+                {
+                    "end": 120,
+                    "name": "registerForEvent",
+                    "start": 119,
+                    "type": "Function"
+                },
+                {
+                    "end": 134,
+                    "name": "unregisterForEvent",
+                    "start": 133,
+                    "type": "Function"
+                },
+                {
+                    "end": 145,
+                    "name": "register",
+                    "start": 145,
+                    "type": "Function"
+                },
+                {
+                    "end": 183,
+                    "name": "activate_email",
+                    "start": 183,
+                    "type": "Function"
+                },
+                {
+                    "end": 202,
+                    "name": "activate",
+                    "start": 202,
+                    "type": "Function"
+                },
+                {
+                    "end": 217,
+                    "name": "userProfileEdit",
+                    "start": 217,
+                    "type": "Function"
+                },
+                {
+                    "end": 230,
+                    "name": "EventList",
+                    "start": 230,
+                    "type": "Function"
+                },
+                {
+                    "end": 238,
+                    "name": "EventUsers",
+                    "start": 238,
+                    "type": "Function"
+                }
+            ],
+            "comments": 3,
+            "language": "Python",
+            "mccabe": 24,
+            "ratio_comment_to_code": 0.02,
+            "sloc": 192,
+            "test_coverage": 0.0,
+            "test_missing": "1-245"
+        }
+    }
+}

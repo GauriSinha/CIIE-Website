@@ -1,0 +1,824 @@
+{
+    "files": {
+        "__init__.py": {
+            "block_positions": [],
+            "comments": 11,
+            "language": "Python",
+            "mccabe": 0,
+            "ratio_comment_to_code": 1.57,
+            "sloc": 7,
+            "test_coverage": 0.0,
+            "test_missing": "12-22"
+        },
+        "admin.py": {
+            "block_positions": [
+                {
+                    "end": 29,
+                    "name": "ColorInput",
+                    "start": 26,
+                    "type": "Class"
+                },
+                {
+                    "end": 42,
+                    "name": "get_widgets",
+                    "start": 30,
+                    "type": "Function"
+                },
+                {
+                    "end": 48,
+                    "name": "SimpleMailConfigAdminForm",
+                    "start": 43,
+                    "type": "Class"
+                },
+                {
+                    "end": 80,
+                    "methods": [
+                        {
+                            "end": 70,
+                            "name": "has_add_permission",
+                            "start": 68,
+                            "type": "Function"
+                        },
+                        {
+                            "end": 73,
+                            "name": "has_delete_permission",
+                            "start": 71,
+                            "type": "Function"
+                        },
+                        {
+                            "end": 80,
+                            "name": "get_urls",
+                            "start": 74,
+                            "type": "Function"
+                        }
+                    ],
+                    "name": "SimpleMailConfigAdmin",
+                    "start": 49,
+                    "type": "Class"
+                },
+                {
+                    "end": 124,
+                    "methods": [
+                        {
+                            "end": 112,
+                            "name": "change_view",
+                            "start": 103,
+                            "type": "Function"
+                        },
+                        {
+                            "end": 117,
+                            "name": "response_post_save_change",
+                            "start": 113,
+                            "type": "Function"
+                        },
+                        {
+                            "end": 124,
+                            "name": "singleton_instance_id",
+                            "start": 118,
+                            "type": "Function"
+                        }
+                    ],
+                    "name": "wrapper",
+                    "start": 81,
+                    "type": "Function"
+                },
+                {
+                    "end": 275,
+                    "methods": [
+                        {
+                            "end": 163,
+                            "name": "available_context",
+                            "start": 135,
+                            "type": "Function"
+                        },
+                        {
+                            "end": 166,
+                            "name": "has_add_permission",
+                            "start": 164,
+                            "type": "Function"
+                        },
+                        {
+                            "end": 169,
+                            "name": "has_delete_permission",
+                            "start": 167,
+                            "type": "Function"
+                        },
+                        {
+                            "end": 186,
+                            "name": "preview_mail",
+                            "start": 170,
+                            "type": "Function"
+                        },
+                        {
+                            "end": 249,
+                            "name": "send_test_mail",
+                            "start": 187,
+                            "type": "Function"
+                        },
+                        {
+                            "end": 275,
+                            "name": "get_urls",
+                            "start": 250,
+                            "type": "Function"
+                        }
+                    ],
+                    "name": "SimpleMailAdmin",
+                    "start": 125,
+                    "type": "Class"
+                }
+            ],
+            "comments": 3,
+            "language": "Python",
+            "mccabe": 16,
+            "ratio_comment_to_code": 0.01,
+            "sloc": 232,
+            "test_coverage": 0.0,
+            "test_missing": "1-277"
+        },
+        "apps.py": {
+            "block_positions": [
+                {
+                    "end": 29,
+                    "methods": [
+                        {
+                            "end": 29,
+                            "name": "ready",
+                            "start": 12,
+                            "type": "Function"
+                        }
+                    ],
+                    "name": "SimpleMailConfig",
+                    "start": 8,
+                    "type": "Class"
+                }
+            ],
+            "comments": 8,
+            "language": "Python",
+            "mccabe": 1,
+            "ratio_comment_to_code": 0.38,
+            "sloc": 21,
+            "test_coverage": 0.0,
+            "test_missing": "1-31"
+        },
+        "fields.py": {
+            "block_positions": [],
+            "comments": 2,
+            "language": "Python",
+            "mccabe": 2,
+            "ratio_comment_to_code": 0.1,
+            "sloc": 20,
+            "test_coverage": 0.0,
+            "test_missing": "1-31"
+        },
+        "forms.py": {
+            "block_positions": [
+                {
+                    "end": 11,
+                    "name": "AdminSendTestMailForm",
+                    "start": 5,
+                    "type": "Class"
+                }
+            ],
+            "comments": 3,
+            "language": "Python",
+            "mccabe": 0,
+            "ratio_comment_to_code": 0.38,
+            "sloc": 8,
+            "test_coverage": 0.0,
+            "test_missing": "2-11"
+        },
+        "mailer.py": {
+            "block_positions": [
+                {
+                    "end": 48,
+                    "methods": [
+                        {
+                            "end": 24,
+                            "name": "set_test_context",
+                            "start": 22,
+                            "type": "Function"
+                        },
+                        {
+                            "end": 28,
+                            "name": "set_context",
+                            "start": 25,
+                            "type": "Function"
+                        },
+                        {
+                            "end": 32,
+                            "name": "get_mail",
+                            "start": 29,
+                            "type": "Function"
+                        },
+                        {
+                            "end": 36,
+                            "name": "render",
+                            "start": 33,
+                            "type": "Function"
+                        },
+                        {
+                            "end": 40,
+                            "name": "send_test_mail",
+                            "start": 37,
+                            "type": "Function"
+                        },
+                        {
+                            "end": 42,
+                            "name": "send",
+                            "start": 41,
+                            "type": "Function"
+                        },
+                        {
+                            "end": 48,
+                            "name": "send_mass_mail",
+                            "start": 47,
+                            "type": "Function"
+                        }
+                    ],
+                    "name": "BaseSimpleMail",
+                    "start": 10,
+                    "type": "Class"
+                },
+                {
+                    "end": 59,
+                    "name": "AlreadyRegistered",
+                    "start": 56,
+                    "type": "Class"
+                },
+                {
+                    "end": 92,
+                    "methods": [
+                        {
+                            "end": 69,
+                            "name": "register",
+                            "start": 64,
+                            "type": "Function"
+                        },
+                        {
+                            "end": 78,
+                            "name": "save_mails",
+                            "start": 70,
+                            "type": "Function"
+                        },
+                        {
+                            "end": 92,
+                            "name": "delete_mails",
+                            "start": 79,
+                            "type": "Function"
+                        }
+                    ],
+                    "name": "SimpleMailer",
+                    "start": 60,
+                    "type": "Class"
+                },
+                {
+                    "end": 113,
+                    "name": "autodiscover",
+                    "start": 93,
+                    "type": "Function"
+                }
+            ],
+            "comments": 7,
+            "language": "Python",
+            "mccabe": 9,
+            "ratio_comment_to_code": 0.09,
+            "sloc": 79,
+            "test_coverage": 0.0,
+            "test_missing": "1-113"
+        },
+        "mails.py": {
+            "block_positions": [
+                {
+                    "end": 6,
+                    "name": "WelcomeMail",
+                    "start": 4,
+                    "type": "Class"
+                },
+                {
+                    "end": 7,
+                    "name": "eventMail1",
+                    "start": 7,
+                    "type": "Class"
+                },
+                {
+                    "end": 10,
+                    "name": "eventMail2",
+                    "start": 10,
+                    "type": "Class"
+                },
+                {
+                    "end": 13,
+                    "name": "eventMail3",
+                    "start": 13,
+                    "type": "Class"
+                },
+                {
+                    "end": 16,
+                    "name": "eventMail4",
+                    "start": 16,
+                    "type": "Class"
+                },
+                {
+                    "end": 19,
+                    "name": "eventMail5",
+                    "start": 19,
+                    "type": "Class"
+                },
+                {
+                    "end": 22,
+                    "name": "eventMail6",
+                    "start": 22,
+                    "type": "Class"
+                }
+            ],
+            "comments": 0,
+            "language": "Python",
+            "mccabe": 0,
+            "ratio_comment_to_code": 0.0,
+            "sloc": 22,
+            "test_coverage": 0.0,
+            "test_missing": "1-31"
+        },
+        "management/commands/register_mails.py": {
+            "block_positions": [
+                {
+                    "end": 14,
+                    "methods": [
+                        {
+                            "end": 14,
+                            "name": "handle",
+                            "start": 10,
+                            "type": "Function"
+                        }
+                    ],
+                    "name": "Command",
+                    "start": 8,
+                    "type": "Class"
+                }
+            ],
+            "comments": 0,
+            "language": "Python",
+            "mccabe": 1,
+            "ratio_comment_to_code": 0.0,
+            "sloc": 9,
+            "test_coverage": 0.0,
+            "test_missing": "1-14"
+        },
+        "management/commands/unregister_mails.py": {
+            "block_positions": [
+                {
+                    "end": 14,
+                    "methods": [
+                        {
+                            "end": 14,
+                            "name": "handle",
+                            "start": 10,
+                            "type": "Function"
+                        }
+                    ],
+                    "name": "Command",
+                    "start": 8,
+                    "type": "Class"
+                }
+            ],
+            "comments": 0,
+            "language": "Python",
+            "mccabe": 1,
+            "ratio_comment_to_code": 0.0,
+            "sloc": 9,
+            "test_coverage": 0.0,
+            "test_missing": "1-14"
+        },
+        "metrics.txt": {
+            "block_positions": [],
+            "comments": 0,
+            "language": "Text only",
+            "mccabe": 0,
+            "ratio_comment_to_code": 0.0,
+            "sloc": 0
+        },
+        "models.py": {
+            "block_positions": [
+                {
+                    "end": 34,
+                    "methods": [
+                        {
+                            "end": 28,
+                            "name": "save",
+                            "start": 24,
+                            "type": "Function"
+                        },
+                        {
+                            "end": 34,
+                            "name": "get_singleton",
+                            "start": 29,
+                            "type": "Function"
+                        }
+                    ],
+                    "name": "SingletonModel",
+                    "start": 18,
+                    "type": "Class"
+                },
+                {
+                    "end": 121,
+                    "methods": [
+                        {
+                            "end": 121,
+                            "name": "context",
+                            "start": 87,
+                            "type": "Function"
+                        }
+                    ],
+                    "name": "SimpleMailConfig",
+                    "start": 35,
+                    "type": "Class"
+                },
+                {
+                    "end": 205,
+                    "methods": [
+                        {
+                            "end": 179,
+                            "name": "render",
+                            "start": 153,
+                            "type": "Function"
+                        },
+                        {
+                            "end": 181,
+                            "name": "get_email_message",
+                            "start": 180,
+                            "type": "Function"
+                        },
+                        {
+                            "end": 199,
+                            "name": "send",
+                            "start": 198,
+                            "type": "Function"
+                        },
+                        {
+                            "end": 205,
+                            "name": "send_mass_mail",
+                            "start": 204,
+                            "type": "Function"
+                        }
+                    ],
+                    "name": "SimpleMail",
+                    "start": 122,
+                    "type": "Class"
+                }
+            ],
+            "comments": 26,
+            "language": "Python",
+            "mccabe": 2,
+            "ratio_comment_to_code": 0.15,
+            "sloc": 168,
+            "test_coverage": 0.0,
+            "test_missing": "1-223"
+        },
+        "templates/admin/simple_mail/simplemail/change_form.html": {
+            "block_positions": [],
+            "comments": 0,
+            "language": "HTML",
+            "mccabe": 0,
+            "ratio_comment_to_code": 0.0,
+            "sloc": 10,
+            "test_coverage": 0.0,
+            "test_missing": "all"
+        },
+        "templates/admin/simple_mail/simplemail/context.html": {
+            "block_positions": [],
+            "comments": 0,
+            "language": "HTML",
+            "mccabe": 0,
+            "ratio_comment_to_code": 0.0,
+            "sloc": 16,
+            "test_coverage": 0.0,
+            "test_missing": "all"
+        },
+        "templates/admin/simple_mail/simplemail/send_test_mail.html": {
+            "block_positions": [],
+            "comments": 0,
+            "language": "HTML",
+            "mccabe": 0,
+            "ratio_comment_to_code": 0.0,
+            "sloc": 27,
+            "test_coverage": 0.0,
+            "test_missing": "all"
+        },
+        "templates/simple_mail/default.html": {
+            "block_positions": [
+                {
+                    "end": 51,
+                    "name": "mcnPreviewText",
+                    "start": 49,
+                    "type": "Class"
+                },
+                {
+                    "end": 68,
+                    "name": "ReadMsgBody",
+                    "start": 66,
+                    "type": "Class"
+                },
+                {
+                    "end": 72,
+                    "name": "ExternalClass",
+                    "start": 70,
+                    "type": "Class"
+                },
+                {
+                    "end": 100,
+                    "name": "ExternalClass",
+                    "start": 100,
+                    "type": "Class"
+                },
+                {
+                    "end": 101,
+                    "name": "ExternalClass",
+                    "start": 101,
+                    "type": "Class"
+                },
+                {
+                    "end": 102,
+                    "name": "ExternalClass",
+                    "start": 102,
+                    "type": "Class"
+                },
+                {
+                    "end": 103,
+                    "name": "ExternalClass",
+                    "start": 103,
+                    "type": "Class"
+                },
+                {
+                    "end": 104,
+                    "name": "ExternalClass",
+                    "start": 104,
+                    "type": "Class"
+                },
+                {
+                    "end": 107,
+                    "name": "ExternalClass",
+                    "start": 105,
+                    "type": "Class"
+                },
+                {
+                    "end": 120,
+                    "name": "templateContainer",
+                    "start": 118,
+                    "type": "Class"
+                },
+                {
+                    "end": 124,
+                    "name": "mcnButton",
+                    "start": 122,
+                    "type": "Class"
+                },
+                {
+                    "end": 126,
+                    "name": "mcnImage",
+                    "start": 126,
+                    "type": "Class"
+                },
+                {
+                    "end": 129,
+                    "name": "mcnRetinaImage",
+                    "start": 127,
+                    "type": "Class"
+                },
+                {
+                    "end": 133,
+                    "name": "mcnTextContent",
+                    "start": 131,
+                    "type": "Class"
+                },
+                {
+                    "end": 137,
+                    "name": "mcnTextContent",
+                    "start": 135,
+                    "type": "Class"
+                },
+                {
+                    "end": 141,
+                    "name": "mcnDividerBlock",
+                    "start": 139,
+                    "type": "Class"
+                },
+                {
+                    "end": 271,
+                    "name": "headerContainer",
+                    "start": 252,
+                    "type": "Class"
+                },
+                {
+                    "end": 274,
+                    "name": "headerContainer",
+                    "start": 275,
+                    "type": "Class"
+                },
+                {
+                    "end": 275,
+                    "name": "mcnTextContent",
+                    "start": 275,
+                    "type": "Class"
+                },
+                {
+                    "end": 275,
+                    "name": "headerContainer",
+                    "start": 276,
+                    "type": "Class"
+                },
+                {
+                    "end": 287,
+                    "name": "mcnTextContent",
+                    "start": 276,
+                    "type": "Class"
+                },
+                {
+                    "end": 290,
+                    "name": "headerContainer",
+                    "start": 291,
+                    "type": "Class"
+                },
+                {
+                    "end": 291,
+                    "name": "mcnTextContent",
+                    "start": 291,
+                    "type": "Class"
+                },
+                {
+                    "end": 291,
+                    "name": "headerContainer",
+                    "start": 292,
+                    "type": "Class"
+                },
+                {
+                    "end": 299,
+                    "name": "mcnTextContent",
+                    "start": 292,
+                    "type": "Class"
+                },
+                {
+                    "end": 345,
+                    "name": "bodyContainer",
+                    "start": 326,
+                    "type": "Class"
+                },
+                {
+                    "end": 348,
+                    "name": "bodyContainer",
+                    "start": 349,
+                    "type": "Class"
+                },
+                {
+                    "end": 349,
+                    "name": "mcnTextContent",
+                    "start": 349,
+                    "type": "Class"
+                },
+                {
+                    "end": 349,
+                    "name": "bodyContainer",
+                    "start": 350,
+                    "type": "Class"
+                },
+                {
+                    "end": 352,
+                    "name": "mcnTextContent",
+                    "start": 350,
+                    "type": "Class"
+                },
+                {
+                    "end": 364,
+                    "name": "bodyContainer",
+                    "start": 365,
+                    "type": "Class"
+                },
+                {
+                    "end": 365,
+                    "name": "mcnTextContent",
+                    "start": 365,
+                    "type": "Class"
+                },
+                {
+                    "end": 365,
+                    "name": "bodyContainer",
+                    "start": 366,
+                    "type": "Class"
+                },
+                {
+                    "end": 368,
+                    "name": "mcnTextContent",
+                    "start": 366,
+                    "type": "Class"
+                },
+                {
+                    "end": 419,
+                    "name": "footerContainer",
+                    "start": 400,
+                    "type": "Class"
+                },
+                {
+                    "end": 422,
+                    "name": "footerContainer",
+                    "start": 423,
+                    "type": "Class"
+                },
+                {
+                    "end": 423,
+                    "name": "mcnTextContent",
+                    "start": 423,
+                    "type": "Class"
+                },
+                {
+                    "end": 423,
+                    "name": "footerContainer",
+                    "start": 424,
+                    "type": "Class"
+                },
+                {
+                    "end": 426,
+                    "name": "mcnTextContent",
+                    "start": 424,
+                    "type": "Class"
+                },
+                {
+                    "end": 438,
+                    "name": "footerContainer",
+                    "start": 439,
+                    "type": "Class"
+                },
+                {
+                    "end": 439,
+                    "name": "mcnTextContent",
+                    "start": 439,
+                    "type": "Class"
+                },
+                {
+                    "end": 439,
+                    "name": "footerContainer",
+                    "start": 440,
+                    "type": "Class"
+                },
+                {
+                    "end": 442,
+                    "name": "mcnTextContent",
+                    "start": 440,
+                    "type": "Class"
+                }
+            ],
+            "comments": 356,
+            "language": "HTML",
+            "mccabe": 0,
+            "ratio_comment_to_code": 0.47,
+            "sloc": 762,
+            "test_coverage": 0.0,
+            "test_missing": "all"
+        },
+        "tests.py": {
+            "block_positions": [],
+            "comments": 1,
+            "language": "Python",
+            "mccabe": 0,
+            "ratio_comment_to_code": 1.0,
+            "sloc": 1,
+            "test_coverage": 0.0,
+            "test_missing": "1"
+        },
+        "translation.py": {
+            "block_positions": [],
+            "comments": 0,
+            "language": "Python",
+            "mccabe": 1,
+            "ratio_comment_to_code": 0.0,
+            "sloc": 10,
+            "test_coverage": 0.0,
+            "test_missing": "1-17"
+        },
+        "views.py": {
+            "block_positions": [],
+            "comments": 1,
+            "language": "Python",
+            "mccabe": 0,
+            "ratio_comment_to_code": 1.0,
+            "sloc": 1,
+            "test_coverage": 0.0,
+            "test_missing": "1"
+        },
+        "widgets.py": {
+            "block_positions": [
+                {
+                    "end": 66,
+                    "name": "SimpleMailCKEditorWidget",
+                    "start": 35,
+                    "type": "Class"
+                }
+            ],
+            "comments": 5,
+            "language": "Python",
+            "mccabe": 7,
+            "ratio_comment_to_code": 0.1,
+            "sloc": 52,
+            "test_coverage": 0.0,
+            "test_missing": "1-69"
+        }
+    }
+}
