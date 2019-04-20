@@ -25,5 +25,8 @@ urlpatterns = [
     url(r'^send_activation_email/$', views.activate_email, name='send_activation_email'),
     url(r'^activate/(?P<uidb64>[0-9A-Za-z_\-]+)/(?P<token>[0-9A-Za-z]{1,13}-[0-9A-Za-z]{1,20})/$', views.activate, name='activate'),
     url(r'^change_password/$', views.change_password, name='change_password'),
+    url(r'^send_otp/$', views.send_otp, name='send_otp'),
+    url(r'^send_data/$', views.send_data, name='send_data'),
+
     #url(r'adminpanel/', include('admin.site.urls'), name='adminPanel'), 
 ]

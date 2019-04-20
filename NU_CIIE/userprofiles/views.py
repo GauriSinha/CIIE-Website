@@ -28,6 +28,8 @@ from .tokens import account_activation_token
 from .models import Event, UserProfile
 from django.contrib.auth import update_session_auth_hash
 from django.contrib.auth.forms import PasswordChangeForm
+import requests
+from django.http import JsonResponse
 
 
 
@@ -243,3 +245,51 @@ def EventUsers(request, event_id):
 
 	return render(request, "show_users.html", context)
 
+
+@login_required
+def send_otp(request):
+	user = UserProfile.objects.get(user=request.user)
+	context = {
+		"user":	user,
+	}
+	user_phone = user.phone_number
+	url = "https://2factor.in/API/V1/293832-67745-11e5-88de-5600000c6b13/SMS/+91" + user_phone +"/AUTOGEN"
+	response = requests.request("GET", url)
+	data = response.json()
+	request.session['otp_session_data'] = data['Details']
+	response_data = {'Message':'Success'}
+	
+	return render(request, "checkout/checkout.html",context)
+
+
+# @login_required
+# def otp_verification(request):
+# 	response_data = {}
+# 	if request.method == "POST" and request.is_ajax:
+# 		user_otp = request.POST['otp']
+		
+#         url = "https://2factor.in/API/V1/293832-67745-11e5-88de-5600000c6b13/SMS/VERIFY/" + 
+#         request.session['otp_session_data'] + "/" + user_otp + ""
+
+#         # otp_session_data is fetched from session.
+# 		response = requests.request("GET", url)		
+# 		data = response.json()
+# 		if data['Status'] == "Success":
+# 			logged_user.is_active = True
+# 			response_data = {'Message':'Success'}
+# 		else:
+# 			response_data = {'Message':'Failed'}
+# 			logout(request)
+# 	return JsonResponse(response_data)
+
+def send_data(request):
+
+	card_number = request.POST['card_number']
+	e_month = request.POST['month']
+	e_year = request.POST['year']
+	cvv = request.POST['cvv']
+	name = request.POST['user_name']
+
+	print(card_number + ' '+ e_month + '/'+ e_year + ' ' + cvv + ' ' + name)
+
+	return HttpResponseRedirect(reverse('index'))
