@@ -16,13 +16,13 @@ Users
 		<li>
 			{{user}} - {{user.name}} - {{user.email}} - {{user.phone_number}} - {{user.course}}
 		</li>
+		
 		{% empty %}
 		<li>
 			No users registered for {{event.title}}
 		</li>
-		Total number of registrations: {{ forloop.counter }}
 		{% endfor %}
-
+		<br><br>Total number of registrations: {{ count }}
 	</ul>
 	
 	<a href="{% url 'eventList' %}">Back to event list</a><br>

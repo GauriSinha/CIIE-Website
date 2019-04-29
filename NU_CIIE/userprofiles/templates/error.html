@@ -5,7 +5,7 @@
 
 {% block title %}
 
-Error
+{{message2}}
 
 {% endblock %}
 
@@ -15,6 +15,6 @@ Error
 {% block body %}
 
 <h1>{{message}}</h1>
-<a href="{% url 'index' %}">Back to Home</a>
+<a href="{% url 'userDash' %}">Back to Dashboard</a>
 
 {% endblock %}

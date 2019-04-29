@@ -30,13 +30,17 @@ from django.contrib.auth import update_session_auth_hash
 from django.contrib.auth.forms import PasswordChangeForm
 import requests
 from django.http import JsonResponse
+from Crypto.Cipher import DES3
+from Crypto import Random
+import base64
 
 
 
 # Create your views here.
 
-def index(request):
-	return render(request, "index.html")
+def index(request, context={}):
+	
+	return render(request, "index.html", context)
 
 def login_view(request):
 	if request.method == 'POST':
@@ -109,11 +113,26 @@ def userDash(request):
 def viewEvent(request, event_id):
 	try:
 		event = Event.objects.get(pk=event_id)
+		user = UserProfile.objects.get(user=request.user).events_registered
+		
+		reg_or_unreg = bool(user.filter(title=event))
+
+		if event.entry_fee > 0:
+			context = {
+				"anEvent" : event,
+				"fee" : event.entry_fee,
+				"reg_or_unreg": reg_or_unreg,
+			}
 			
+		else:
+			context = {
+				"anEvent" : event,
+				"reg_or_unreg": reg_or_unreg
+			}
 	except Event.DoesNotExist:
 		raise Http404('Event does not exist!')
 		
-	return render(request, "viewEvent.html", {"anEvent" : event})
+	return render(request, "viewEvent.html", context)
 
 
 @login_required
@@ -238,9 +257,11 @@ def EventList(request):
 @login_required
 def EventUsers(request, event_id):
 	event = Event.objects.get(pk=event_id)
+
 	context = {
 		"users": event.regEvents.all(),
 		"event": event,
+		"count": event.regEvents.all().count()
 	}
 
 	return render(request, "show_users.html", context)
@@ -249,47 +270,174 @@ def EventUsers(request, event_id):
 @login_required
 def send_otp(request):
 	user = UserProfile.objects.get(user=request.user)
-	context = {
-		"user":	user,
-	}
-	user_phone = user.phone_number
-	url = "https://2factor.in/API/V1/293832-67745-11e5-88de-5600000c6b13/SMS/+91" + user_phone +"/AUTOGEN"
-	response = requests.request("GET", url)
-	data = response.json()
-	request.session['otp_session_data'] = data['Details']
-	response_data = {'Message':'Success'}
 	
-	return render(request, "checkout/checkout.html",context)
+	user_phone = user.phone_number
+	url = "https://2factor.in/API/V1/25fa31b9-62a4-11e9-90e4-0200cd936042/SMS/+91" + user_phone +"/AUTOGEN"
+	#url = 'https://jsonplaceholder.typicod'
+
+	r = requests.Response()
+
+	try:
+		r = requests.get(url)
+	except requests.exceptions.ConnectionError:
+		message = "Encountered a problem. Server not responding!"
+		context = {
+			"message": message,
+			"message2": "Connection timed out!"
+		}
+		return render(request, "error.html", context)
 
 
-# @login_required
-# def otp_verification(request):
-# 	response_data = {}
-# 	if request.method == "POST" and request.is_ajax:
-# 		user_otp = request.POST['otp']
-		
-#         url = "https://2factor.in/API/V1/293832-67745-11e5-88de-5600000c6b13/SMS/VERIFY/" + 
-#         request.session['otp_session_data'] + "/" + user_otp + ""
+	print(r.json())
+	data = r.json()
+	print('Json data received: ' + data['Details'] + " and " + data['Status'])
+	session_detail = data['Details']
+	session_status = data['Status']
 
-#         # otp_session_data is fetched from session.
-# 		response = requests.request("GET", url)		
-# 		data = response.json()
-# 		if data['Status'] == "Success":
-# 			logged_user.is_active = True
-# 			response_data = {'Message':'Success'}
-# 		else:
-# 			response_data = {'Message':'Failed'}
-# 			logout(request)
-# 	return JsonResponse(response_data)
+	#status_code = 400
+	if r.status_code == 200:
 
+		if session_status == 'Success':
+			context = {
+			"user_phone": user_phone,
+			"session_detail" : session_detail,
+			"message": "OTP sent successfully"
+			}
+			
+
+		else:
+			context = {
+			"user_phone": user_phone,
+			"session_detail" : session_detail,
+			"message": "OTP couldn't be delivered",
+			"button_text": "Resend OTP",
+			}
+
+		return render(request, "checkout/verify_otp.html",context)
+
+	else:
+		message = "Encountered a problem. Got a status code " + str(r.status_code) + "from the server!!"
+		return render(request, "error.html", {"message": message})
+
+def encrypt_3des(plainText):
+
+	key = 'Sixteen byte key'
+	iv = b'\xf5\x00\xd2+1J\xc5\x19'
+	cipher_encrypt = DES3.new(key, DES3.MODE_OFB, iv)
+
+	blockSize = 8
+	padDiff = blockSize - (len(plainText) % blockSize)
+
+	print('\nPlaintext Before: '+plainText)
+
+	plainText = "{}{}".format(plainText, "".join(chr(1) * padDiff))
+	encrypted_text = cipher_encrypt.encrypt(plainText)
+
+	encrypted_text2 = base64.b64encode(encrypted_text).decode()
+
+	print('\nPlaintext After padding: '+plainText)
+
+	return encrypted_text2
+
+@login_required
 def send_data(request):
 
 	card_number = request.POST['card_number']
 	e_month = request.POST['month']
 	e_year = request.POST['year']
 	cvv = request.POST['cvv']
-	name = request.POST['user_name']
+	name = request.POST['name']
+	otp = request.POST['otp']
+	session_detail = request.POST['session_detail']
 
-	print(card_number + ' '+ e_month + '/'+ e_year + ' ' + cvv + ' ' + name)
+	url = "https://2factor.in/API/V1/25fa31b9-62a4-11e9-90e4-0200cd936042/SMS/VERIFY/" + session_detail +"/" + otp + ""
 
-	return HttpResponseRedirect(reverse('index'))
+	r = requests.Response()
+	try:
+		r = requests.get(url)
+	except requests.exceptions.ConnectionError:
+		message = "Encountered a problem!Server not responding."
+		context = {
+			"message": message,
+			"message2": "Connection timed out!"
+		}
+		return render(request, "error.html", context)
+	
+	data = r.json()
+
+	print(r.status_code)
+
+	if r.status_code == 200:
+		if data["Status"] == "Success" and data["Details"] == "OTP Matched":
+			print('send_data method ' + data['Details'] + " and " + data['Status'])
+			print('\n'+card_number + ' '+ e_month + '/'+ e_year + ' ' + cvv + ' ' + name)
+
+			context = {
+				"message": "Request for Payment",
+				"card_number": card_number,
+				"e_month": e_month,
+				"e_year": e_year,
+				"cvv": cvv,
+				"name": name,
+			}
+			encrypted_text = encrypt_3des(json.dumps(context))
+
+			#message = call_flask_api(request, encrypted_text)
+
+			url2 = "http://127.0.0.1:5000/api"
+			
+			headers = {
+			"Content-Type": "application/json",
+			}
+
+			payload = {
+			"encrypted_text": encrypted_text,
+			}
+
+			#send_data = json.dumps(payload)
+
+			#print('\nsend_data: '+ send_data)
+			r2 = requests.Response()
+			try:
+				r2 = requests.post(url2, headers=headers, json=payload)
+			except requests.exceptions.ConnectionError:
+				message = "Encountered a problem!Server not responding."
+				return message
+	
+
+			print(r2.status_code)
+
+			data2 = r2.json()
+
+			print('\nData: %s' % json.dumps(data2))
+
+			if r2.status_code == 200:
+				if data["Status"] == "Success":
+					print('\nStatus code %s' + str(r2.status_code) + ' received from Flask API')
+					message = "Payment successfull!"
+					message2 = "Success!"
+
+			else:
+				message = "Payment failed!\nEncountered a problem. Got a status code %s " + str(r2.status_code) + "from the server!!"
+				message2 = "Failure"
+			print(message)
+
+			context = {
+			"message": message,
+			"message2": message2,
+			}
+			
+		else:
+			context = {
+			"message": "OTP verification failed!",
+			"message2": "Failure",
+			}
+
+	else:
+		message = "Encountered a problem. Got a status code " + str(r.status_code) + " from the server!!"
+		context = {
+			"message":message,
+			"message2": "Failure",
+		}
+	
+	return render(request, "error.html", context)

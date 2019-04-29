@@ -28,5 +28,4 @@ urlpatterns = [
     url(r'^send_otp/$', views.send_otp, name='send_otp'),
     url(r'^send_data/$', views.send_data, name='send_data'),
 
-    #url(r'adminpanel/', include('admin.site.urls'), name='adminPanel'), 
 ]

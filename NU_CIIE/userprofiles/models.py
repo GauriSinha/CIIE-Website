@@ -15,7 +15,8 @@ class Event(models.Model):
 	event_date = models.DateTimeField()
 	time = models.TimeField()
 	venue = models.CharField(max_length=1024)
-	content = models.TextField()
+	content = models.TextField(null=False, blank=False)
+	entry_fee = models.PositiveIntegerField()
 	slug = models.SlugField(db_index=True, unique=True, max_length=2024)
 	
 	def __str__(self):
