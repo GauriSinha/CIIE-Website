@@ -331,6 +331,8 @@ def encrypt_3des(plainText):
 	print('\nPlaintext Before: '+plainText)
 
 	plainText = "{}{}".format(plainText, "".join(chr(1) * padDiff))
+	
+	##DES encryption
 	encrypted_text = cipher_encrypt.encrypt(plainText)
 
 	encrypted_text2 = base64.b64encode(encrypted_text).decode()

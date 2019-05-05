@@ -1,0 +1,1103 @@
+OUTPUT OF THE METRICS TOOL:
+
+Description about the tool: 
+It computes SLOC and McCabe complexity metrics
+
+Coding Metrics for the Full project
+
+Metrics Summary:
+Files                       Language        SLOC Comment McCabe 
+----- ------------------------------ ----------- ------- ------ 
+    2                            CSS         313      16      0 
+   31                           HTML        1728    2811      0 
+    1                     JavaScript          49      10      5 
+   30                         Python        1058     136     66 
+    2                      Text only           0       0      0 
+----- ------------------------------ ----------- ------- ------ 
+   66                          Total        3148    2973     71 
+
+
+
+
+
+Coding Metrics for the simple_mail app
+
+Metrics Summary:
+Files                       Language        SLOC Comment McCabe 
+----- ------------------------------ ----------- ------- ------ 
+    4                           HTML         815     356      0 
+   16                         Python         639      67     40 
+----- ------------------------------ ----------- ------- ------ 
+   20                          Total        1454     423     40 
+
+
+
+
+Coding Metrics for the userprofiles app
+
+Metrics Summary:
+Files                       Language        SLOC Comment McCabe 
+----- ------------------------------ ----------- ------- ------ 
+    2                            CSS         313      16      0 
+   27                           HTML         913    2455      0 
+    1                     JavaScript          49      10      5 
+    9                         Python         315       7     25 
+    1                      Text only           0       0      0 
+----- ------------------------------ ----------- ------- ------ 
+   40                          Total        1590    2488     30 
+
+
+
+
+
+OUTPUT OF THE PROSPECTOR TOOL:
+
+Description about the tool:
+
+Prospector is a tool to analyse Python code and output information about errors, potential problems, convention violations and complexity.
+
+It brings together the functionality of other Python analysis tools such as Pylint, pep8, and McCabe complexity. See the Supported Tools documentation section for a complete list.
+
+The primary aim of Prospector is to be useful 'out of the box'. A common complaint of other Python analysis tools is that it takes a long time to filter through which errors are relevant or interesting to your own coding style. Prospector provides some default profiles, which hopefully will provide a good starting point and will be useful straight away, and adapts the output depending on the libraries your project uses. 
+
+
+Messages
+========
+
+NU_CIIE/__init__.py
+  Line: 1
+    pylint: invalid-name / Module name "NU_CIIE" doesn't conform to snake_case naming style
+
+NU_CIIE/settings.py
+  Line: 22
+    dodgy: secret / Possible hardcoded secret key
+  Line: 69
+    pep8: W293 / blank line contains whitespace (col 1)
+  Line: 132
+    dodgy: password / Possible hardcoded password
+
+NU_CIIE/urls.py
+  Line: 17
+    pylint: import-error / Unable to import 'django.urls'
+
+manage.py
+  Line: 14
+    pylint: syntax-error / invalid syntax (<string>, line 14)
+
+simple_mail/__init__.py
+  Line: 1
+    pylint: anomalous-backslash-in-string / Anomalous backslash in string: '\|'. String constant might be missing an r prefix.
+    pylint: anomalous-backslash-in-string / Anomalous backslash in string: '\|'. String constant might be missing an r prefix.
+    pylint: anomalous-backslash-in-string / Anomalous backslash in string: '\ '. String constant might be missing an r prefix.
+    pylint: anomalous-backslash-in-string / Anomalous backslash in string: '\ '. String constant might be missing an r prefix.
+    pylint: anomalous-backslash-in-string / Anomalous backslash in string: '\_'. String constant might be missing an r prefix.
+    pylint: anomalous-backslash-in-string / Anomalous backslash in string: '\ '. String constant might be missing an r prefix.
+    pylint: anomalous-backslash-in-string / Anomalous backslash in string: '\_'. String constant might be missing an r prefix.
+    pylint: anomalous-backslash-in-string / Anomalous backslash in string: '\_'. String constant might be missing an r prefix.
+  Line: 10
+    pep8: W605 / invalid escape sequence '\|' (col -251)
+    pep8: W605 / invalid escape sequence '\|' (col -245)
+    pep8: W605 / invalid escape sequence '\ ' (col -237)
+    pep8: W605 / invalid escape sequence '\ ' (col -226)
+    pep8: W605 / invalid escape sequence '\_' (col -213)
+    pep8: W605 / invalid escape sequence '\ ' (col -209)
+    pep8: W605 / invalid escape sequence '\_' (col -135)
+    pep8: W605 / invalid escape sequence '\_' (col -118)
+  Line: 22
+    pylint: invalid-name / Constant name "default_app_config" doesn't conform to UPPER_CASE naming style
+  Line: 23
+    pylint: trailing-newlines / Trailing newlines
+
+simple_mail/admin.py
+  Line: 12
+    pylint: import-error / Unable to import 'django.urls'
+  Line: 23
+    pylint: invalid-name / Constant name "sensitive_post_parameters_m" doesn't conform to UPPER_CASE naming style
+  Line: 36
+    pep8: E305 / expected 2 blank lines after class or function definition, found 1 (col 1)
+  Line: 37
+    pylint: import-error / Unable to import 'modeltranslation.admin' (col 4)
+  Line: 38
+    pylint: invalid-name / Constant name "modelAdminClass" doesn't conform to UPPER_CASE naming style (col 4)
+  Line: 40
+    pylint: invalid-name / Class name "modelAdminClass" doesn't conform to PascalCase naming style (col 4)
+  Line: 49
+    pep8: E302 / expected 2 blank lines, found 1 (col 1)
+  Line: 55
+    pep8: E501 / line too long (104 > 99 characters) (col 100)
+  Line: 98
+    pylint: missing-super-argument / Missing argument to super() (col 33)
+  Line: 112
+    pep8: W293 / blank line contains whitespace (col 1)
+  Line: 114
+    pep8: E501 / line too long (100 > 99 characters) (col 100)
+  Line: 137
+    pylint: no-self-use / Method could be a function (col 4)
+  Line: 139
+    pylint: protected-access / Access to a protected member _registry of a client class (col 20)
+  Line: 142
+    pylint: invalid-name / Variable name "v" doesn't conform to snake_case naming style (col 15)
+  Line: 148
+    pep8: E501 / line too long (101 > 99 characters) (col 100)
+  Line: 166
+    pylint: unused-argument / Unused argument 'args'
+    pylint: unused-argument / Unused argument 'kwargs'
+  Line: 169
+    pylint: unused-argument / Unused argument 'args'
+    pylint: unused-argument / Unused argument 'kwargs'
+  Line: 172
+    pylint: redefined-builtin / Redefining built-in 'id' (col 36)
+    pylint: invalid-name / Argument name "id" doesn't conform to snake_case naming style (col 4)
+  Line: 182
+    pylint: protected-access / Access to a protected member _registry of a client class (col 20)
+  Line: 188
+    pep8: E303 / too many blank lines (2) (col 5)
+  Line: 189
+    pylint: redefined-builtin / Redefining built-in 'id' (col 38)
+    pylint: invalid-name / Argument name "id" doesn't conform to snake_case naming style (col 4)
+  Line: 203
+    pylint: protected-access / Access to a protected member _registry of a client class (col 28)
+  Line: 222
+    pep8: N806 / variable in function should be lowercase (col 9)
+    pylint: invalid-name / Variable name "adminForm" doesn't conform to snake_case naming style (col 8)
+  Line: 226
+    pep8: E251 / unexpected spaces around keyword / parameter equals (col 19)
+  Line: 227
+    pep8: E251 / unexpected spaces around keyword / parameter equals (col 23)
+  Line: 228
+    pep8: E251 / unexpected spaces around keyword / parameter equals (col 22)
+  Line: 229
+    pep8: E251 / unexpected spaces around keyword / parameter equals (col 18)
+  Line: 230
+    pep8: E251 / unexpected spaces around keyword / parameter equals (col 22)
+  Line: 231
+    pep8: E127 / continuation line over-indented for visual indent (col 26)
+  Line: 232
+    pep8: E251 / unexpected spaces around keyword / parameter equals (col 17)
+  Line: 233
+    pep8: E251 / unexpected spaces around keyword / parameter equals (col 20)
+  Line: 234
+    pep8: E251 / unexpected spaces around keyword / parameter equals (col 35)
+  Line: 235
+    pep8: E251 / unexpected spaces around keyword / parameter equals (col 35)
+  Line: 236
+    pep8: E251 / unexpected spaces around keyword / parameter equals (col 30)
+  Line: 237
+    pep8: E251 / unexpected spaces around keyword / parameter equals (col 18)
+  Line: 238
+    pep8: E251 / unexpected spaces around keyword / parameter equals (col 22)
+  Line: 239
+    pep8: E251 / unexpected spaces around keyword / parameter equals (col 21)
+  Line: 240
+    pep8: E251 / unexpected spaces around keyword / parameter equals (col 23)
+  Line: 259
+    pylint: missing-super-argument / Missing argument to super() (col 33)
+
+simple_mail/apps.py
+  Line: 21
+    pylint: pointless-string-statement / String statement has no effect
+  Line: 22
+    pylint: import-error / Unable to import 'cssutils' (col 12)
+  Line: 23
+    pylint: import-error / Unable to import 'cssutils.profiles' (col 12)
+  Line: 25
+    pep8: E501 / line too long (105 > 99 characters) (col 100)
+  Line: 29
+    pep8: E501 / line too long (100 > 99 characters) (col 100)
+
+simple_mail/fields.py
+  Line: 14
+    pylint: keyword-arg-before-vararg / Keyword argument before variable positional arguments list in the definition of __init__ function (col 8)
+    pep8: E501 / line too long (119 > 99 characters) (col 100)
+  Line: 15
+    pep8: E501 / line too long (115 > 99 characters) (col 100)
+  Line: 16
+    pep8: E128 / continuation line under-indented for visual indent (col 53)
+    pep8: E501 / line too long (106 > 99 characters) (col 100)
+
+simple_mail/mailer.py
+  Line: 37
+    pylint: invalid-name / Argument name "to" doesn't conform to snake_case naming style (col 4)
+  Line: 41
+    pylint: dangerous-default-value / Dangerous default value [] as argument (col 4)
+    pylint: dangerous-default-value / Dangerous default value [] as argument (col 4)
+    pylint: dangerous-default-value / Dangerous default value {} as argument (col 4)
+    pylint: dangerous-default-value / Dangerous default value [] as argument (col 4)
+    pylint: dangerous-default-value / Dangerous default value [] as argument (col 4)
+    pylint: too-many-arguments / Too many arguments (10/5) (col 4)
+    pylint: invalid-name / Argument name "to" doesn't conform to snake_case naming style (col 4)
+  Line: 47
+    pylint: dangerous-default-value / Dangerous default value {} as argument (col 4)
+    pylint: dangerous-default-value / Dangerous default value [] as argument (col 4)
+    pylint: dangerous-default-value / Dangerous default value [] as argument (col 4)
+    pylint: dangerous-default-value / Dangerous default value {} as argument (col 4)
+    pylint: dangerous-default-value / Dangerous default value [] as argument (col 4)
+    pylint: dangerous-default-value / Dangerous default value [] as argument (col 4)
+    pylint: too-many-arguments / Too many arguments (14/5) (col 4)
+    pylint: unused-argument / Unused argument 'context' (col 33)
+    pylint: unused-argument / Unused argument 'template' (col 45)
+    pylint: invalid-name / Argument name "to" doesn't conform to snake_case naming style (col 4)
+  Line: 74
+    pylint: unused-variable / Unused variable 'obj' (col 12)
+  Line: 90
+    pylint: invalid-name / Constant name "simple_mailer" doesn't conform to UPPER_CASE naming style
+  Line: 100
+    pylint: protected-access / Access to a protected member _registry of a client class (col 43)
+  Line: 103
+    pylint: bare-except / No exception type(s) specified (col 8)
+  Line: 107
+    pylint: protected-access / Access to a protected member _registry of a client class (col 12)
+
+simple_mail/mails.py
+  Line: None
+    pep8: E101 / indentation contains mixed spaces and tabs (col 1)
+  Line: 7
+    pep8: E302 / expected 2 blank lines, found 1 (col 1)
+    pep8: N801 / class names should use CapWords convention (col 7)
+  Line: 8
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 10
+    pep8: E302 / expected 2 blank lines, found 1 (col 1)
+    pep8: N801 / class names should use CapWords convention (col 7)
+  Line: 11
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 13
+    pep8: E302 / expected 2 blank lines, found 1 (col 1)
+    pep8: N801 / class names should use CapWords convention (col 7)
+  Line: 14
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 16
+    pep8: E302 / expected 2 blank lines, found 1 (col 1)
+    pep8: N801 / class names should use CapWords convention (col 7)
+  Line: 17
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 19
+    pep8: E302 / expected 2 blank lines, found 1 (col 1)
+    pep8: N801 / class names should use CapWords convention (col 7)
+  Line: 20
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 22
+    pep8: E302 / expected 2 blank lines, found 1 (col 1)
+    pep8: N801 / class names should use CapWords convention (col 7)
+  Line: 23
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 25
+    pep8: E305 / expected 2 blank lines after class or function definition, found 1 (col 1)
+
+simple_mail/management/commands/register_mails.py
+  Line: 3
+    pylint: unused-import / Unused CommandError imported from django.core.management.base
+  Line: 12
+    pylint: invalid-name / Variable name "m" doesn't conform to snake_case naming style (col 12)
+
+simple_mail/management/commands/unregister_mails.py
+  Line: 3
+    pylint: unused-import / Unused CommandError imported from django.core.management.base
+  Line: 12
+    pylint: invalid-name / Variable name "m" doesn't conform to snake_case naming style (col 12)
+
+simple_mail/models.py
+  Line: 3
+    pylint: import-error / Unable to import 'html2text'
+  Line: 5
+    pylint: wrong-import-order / third party import "from django.db import models" should be placed before "import html2text"
+  Line: 6
+    pylint: wrong-import-order / third party import "from django.conf import settings" should be placed before "import html2text"
+  Line: 7
+    pylint: wrong-import-order / third party import "from django.template import Context, Template, loader" should be placed before "import html2text"
+  Line: 8
+    pylint: wrong-import-order / third party import "from django.core.mail import EmailMultiAlternatives, get_connection" should be placed before "import html2text"
+  Line: 9
+    pylint: wrong-import-order / third party import "from django.utils.translation import ugettext_lazy as _" should be placed before "import html2text"
+  Line: 10
+    pylint: wrong-import-order / third party import "from django.utils.encoding import python_2_unicode_compatible" should be placed before "import html2text"
+  Line: 12
+    pylint: import-error / Unable to import 'pilkit.processors'
+  Line: 13
+    pylint: import-error / Unable to import 'imagekit.models'
+  Line: 15
+    pylint: import-error / Unable to import 'premailer'
+  Line: 24
+    pylint: arguments-differ / Parameters differ from overridden 'save' method (col 4)
+  Line: 25
+    pylint: invalid-name / Attribute name "pk" doesn't conform to snake_case naming style (col 8)
+  Line: 30
+    pylint: unused-variable / Unused variable 'created' (col 13)
+  Line: 46
+    pep8: E231 / missing whitespace after ',' (col 72)
+  Line: 48
+    pep8: E501 / line too long (111 > 99 characters) (col 100)
+  Line: 55
+    pep8: E501 / line too long (108 > 99 characters) (col 100)
+  Line: 57
+    pep8: E501 / line too long (128 > 99 characters) (col 100)
+  Line: 59
+    pep8: E501 / line too long (104 > 99 characters) (col 100)
+  Line: 61
+    pep8: E501 / line too long (101 > 99 characters) (col 100)
+  Line: 63
+    pep8: E501 / line too long (102 > 99 characters) (col 100)
+  Line: 64
+    pep8: E501 / line too long (108 > 99 characters) (col 100)
+  Line: 65
+    pep8: E501 / line too long (110 > 99 characters) (col 100)
+  Line: 67
+    pep8: E501 / line too long (102 > 99 characters) (col 100)
+  Line: 68
+    pep8: E501 / line too long (104 > 99 characters) (col 100)
+  Line: 69
+    pep8: E501 / line too long (108 > 99 characters) (col 100)
+  Line: 70
+    pep8: E501 / line too long (110 > 99 characters) (col 100)
+  Line: 77
+    pep8: E501 / line too long (103 > 99 characters) (col 100)
+  Line: 78
+    pep8: E501 / line too long (110 > 99 characters) (col 100)
+  Line: 80
+    pep8: W293 / blank line contains whitespace (col 1)
+  Line: 111
+    pep8: E114 / indentation is not a multiple of four (comment) (col 2)
+  Line: 112
+    pep8: E114 / indentation is not a multiple of four (comment) (col 3)
+  Line: 113
+    pep8: E114 / indentation is not a multiple of four (comment) (col 4)
+  Line: 126
+    pep8: E501 / line too long (100 > 99 characters) (col 100)
+  Line: 130
+    pep8: E501 / line too long (110 > 99 characters) (col 100)
+  Line: 141
+    pep8: W293 / blank line contains whitespace (col 1)
+  Line: 145
+    pep8: E114 / indentation is not a multiple of four (comment) (col 3)
+  Line: 146
+    pep8: E114 / indentation is not a multiple of four (comment) (col 4)
+  Line: 148
+    pep8: E114 / indentation is not a multiple of four (comment) (col 6)
+  Line: 149
+    pep8: E114 / indentation is not a multiple of four (comment) (col 7)
+  Line: 155
+    pylint: dangerous-default-value / Dangerous default value {} as argument (col 4)
+  Line: 162
+    pep8: E501 / line too long (102 > 99 characters) (col 100)
+  Line: 168
+    pep8: E501 / line too long (100 > 99 characters) (col 100)
+  Line: 171
+    pylint: invalid-name / Variable name "h" doesn't conform to snake_case naming style (col 8)
+  Line: 182
+    pylint: dangerous-default-value / Dangerous default value {} as argument (col 4)
+    pylint: dangerous-default-value / Dangerous default value [] as argument (col 4)
+    pylint: dangerous-default-value / Dangerous default value [] as argument (col 4)
+    pylint: dangerous-default-value / Dangerous default value {} as argument (col 4)
+    pylint: dangerous-default-value / Dangerous default value [] as argument (col 4)
+    pylint: dangerous-default-value / Dangerous default value [] as argument (col 4)
+    pylint: too-many-arguments / Too many arguments (11/5) (col 4)
+    pylint: invalid-name / Argument name "to" doesn't conform to snake_case naming style (col 4)
+  Line: 200
+    pylint: dangerous-default-value / Dangerous default value {} as argument (col 4)
+    pylint: dangerous-default-value / Dangerous default value [] as argument (col 4)
+    pylint: dangerous-default-value / Dangerous default value [] as argument (col 4)
+    pylint: dangerous-default-value / Dangerous default value {} as argument (col 4)
+    pylint: dangerous-default-value / Dangerous default value [] as argument (col 4)
+    pylint: dangerous-default-value / Dangerous default value [] as argument (col 4)
+    pylint: too-many-arguments / Too many arguments (12/5) (col 4)
+    pylint: invalid-name / Argument name "to" doesn't conform to snake_case naming style (col 4)
+  Line: 205
+    pep8: E501 / line too long (134 > 99 characters) (col 100)
+  Line: 208
+    pylint: dangerous-default-value / Dangerous default value {} as argument (col 4)
+    pylint: dangerous-default-value / Dangerous default value [] as argument (col 4)
+    pylint: dangerous-default-value / Dangerous default value [] as argument (col 4)
+    pylint: dangerous-default-value / Dangerous default value {} as argument (col 4)
+    pylint: dangerous-default-value / Dangerous default value [] as argument (col 4)
+    pylint: dangerous-default-value / Dangerous default value [] as argument (col 4)
+    pylint: too-many-arguments / Too many arguments (14/5) (col 4)
+    pylint: too-many-locals / Too many local variables (16/15) (col 4)
+    pylint: invalid-name / Argument name "to" doesn't conform to snake_case naming style (col 4)
+  Line: 212
+    pep8: E501 / line too long (112 > 99 characters) (col 100)
+  Line: 220
+    pep8: E501 / line too long (131 > 99 characters) (col 100)
+  Line: 224
+    pylint: trailing-newlines / Trailing newlines
+
+simple_mail/translation.py
+  Line: 4
+    pylint: import-error / Unable to import 'modeltranslation.translator' (col 4)
+  Line: 8
+    pep8: E303 / too many blank lines (2) (col 5)
+  Line: 14
+    pep8: E303 / too many blank lines (2) (col 5)
+
+simple_mail/views.py
+  Line: 1
+    pylint: unused-import / Unused render imported from django.shortcuts
+
+simple_mail/widgets.py
+  Line: 37
+    pylint: keyword-arg-before-vararg / Keyword argument before variable positional arguments list in the definition of __init__ function (col 4)
+    pep8: E501 / line too long (115 > 99 characters) (col 100)
+  Line: 38
+    pylint: bad-super-call / Bad first argument 'CKEditorWidget' given to super() (col 8)
+  Line: 51
+    pylint: undefined-variable / Undefined variable 'ImproperlyConfigured' (col 30)
+  Line: 57
+    pylint: undefined-variable / Undefined variable 'ImproperlyConfigured' (col 26)
+  Line: 61
+    pylint: undefined-variable / Undefined variable 'ImproperlyConfigured' (col 22)
+
+userprofiles/admin.py
+  Line: 6
+    pep8: E302 / expected 2 blank lines, found 1 (col 1)
+  Line: 7
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 8
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 10
+    pep8: E305 / expected 2 blank lines after class or function definition, found 1 (col 1)
+    pep8: E203 / whitespace before ',' (col 71)
+    pep8: E501 / line too long (145 > 99 characters) (col 100)
+    pep8: E231 / missing whitespace after ',' (col 43)
+  Line: 11
+    pep8: E501 / line too long (112 > 99 characters) (col 100)
+    pep8: E231 / missing whitespace after ',' (col 49)
+
+userprofiles/apps.py
+  Line: 5
+    pep8: W191 / indentation contains tabs (col 1)
+
+userprofiles/forms.py
+  Line: 2
+    pylint: unused-import / Unused UserCreationForm imported from django.contrib.auth.forms
+  Line: 5
+    pylint: wrong-import-order / third party import "from django.contrib.auth.forms import PasswordResetForm" should be placed before "from .models import UserProfile"
+    pylint: unused-import / Unused PasswordResetForm imported from django.contrib.auth.forms
+  Line: 6
+    pylint: reimported / Reimport 'User' (imported line 3)
+    pylint: wrong-import-order / third party import "from django.contrib.auth.models import User" should be placed before "from .models import UserProfile"
+    pyflakes: F811 / redefinition of unused 'User' from line 3 (col 1)
+  Line: 7
+    pylint: wrong-import-order / third party import "from django.contrib import messages" should be placed before "from .models import UserProfile"
+    pylint: unused-import / Unused messages imported from django.contrib
+  Line: 8
+    pylint: wrong-import-order / third party import "from django.http import HttpResponseRedirect" should be placed before "from .models import UserProfile"
+    pylint: unused-import / Unused HttpResponseRedirect imported from django.http
+  Line: 9
+    pylint: import-error / Unable to import 'django.urls'
+    pylint: wrong-import-order / third party import "from django.urls import reverse" should be placed before "from .models import UserProfile"
+    pylint: unused-import / Unused reverse imported from django.urls
+  Line: 10
+    pylint: wrong-import-order / third party import "from django.core.exceptions import ValidationError" should be placed before "from .models import UserProfile"
+    pylint: unused-import / Unused ValidationError imported from django.core.exceptions
+  Line: 14
+    pep8: E303 / too many blank lines (3) (col 1)
+  Line: 15
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 17
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 18
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 19
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: E231 / missing whitespace after ',' (col 35)
+  Line: 20
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: E201 / whitespace after '{' (col 14)
+    pylint: bad-whitespace / No space allowed after bracket
+		widgets = { 'username': forms.TextInput(attrs={'placeholder': 'Username'}),
+            ^
+  Line: 21
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: E128 / continuation line under-indented for visual indent (col 6)
+    pep8: E202 / whitespace before '}' (col 95)
+    pylint: bad-whitespace / No space allowed before bracket
+					'password': forms.PasswordInput(attrs={'placeholder': 'Password', 'class': 'form-control' }),
+                                                                                               ^
+  Line: 22
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: E128 / continuation line under-indented for visual indent (col 6)
+  Line: 23
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: E124 / closing bracket does not match visual indentation (col 3)
+  Line: 27
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 28
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: E301 / expected 1 blank line, found 0 (col 2)
+  Line: 29
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 30
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: E231 / missing whitespace after ',' (col 52)
+  Line: 31
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 32
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: E126 / continuation line over-indented for hanging indent (col 6)
+    pep8: E202 / whitespace before '}' (col 95)
+    pylint: bad-whitespace / No space allowed before bracket
+					'institution': forms.TextInput(attrs={'placeholder': 'Institute', 'class': 'form-control' }),
+                                                                                               ^
+  Line: 33
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: E202 / whitespace before '}' (col 87)
+    pylint: bad-whitespace / No space allowed before bracket
+					'course': forms.TextInput(attrs={'placeholder': 'Course', 'class': 'form-control' }),
+                                                                                       ^
+  Line: 34
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: E501 / line too long (101 > 99 characters) (col 100)
+  Line: 35
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 37
+    pep8: E302 / expected 2 blank lines, found 1 (col 1)
+  Line: 38
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 39
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 40
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: E231 / missing whitespace after ',' (col 95)
+  Line: 41
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 42
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: E126 / continuation line over-indented for hanging indent (col 6)
+    pep8: E202 / whitespace before '}' (col 95)
+    pylint: bad-whitespace / No space allowed before bracket
+					'institution': forms.TextInput(attrs={'placeholder': 'Institute', 'class': 'form-control' }),
+                                                                                               ^
+  Line: 43
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: E202 / whitespace before '}' (col 87)
+    pylint: bad-whitespace / No space allowed before bracket
+					'course': forms.TextInput(attrs={'placeholder': 'Course', 'class': 'form-control' }),
+                                                                                       ^
+  Line: 44
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: E202 / whitespace before '}' (col 88)
+    pylint: bad-whitespace / No space allowed before bracket
+					'name': forms.TextInput(attrs={'placeholder': 'Your Name', 'class': 'form-control' }),
+                                                                                        ^
+  Line: 45
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 46
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: E202 / whitespace before '}' (col 92)
+    pylint: bad-whitespace / No space allowed before bracket
+					'bio': forms.TextInput(attrs={'placeholder': 'About yourself', 'class': 'form-control' }),
+                                                                                            ^
+  Line: 47
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: E202 / whitespace before '}' (col 85)
+    pylint: bad-whitespace / No space allowed before bracket
+					'email': forms.TextInput(attrs={'placeholder': 'Email', 'class': 'form-control' }),
+                                                                                     ^
+  Line: 48
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: E501 / line too long (101 > 99 characters) (col 100)
+  Line: 49
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 50
+    pylint: trailing-newlines / Trailing newlines
+
+userprofiles/models.py
+  Line: 2
+    pylint: wrong-import-order / standard import "import datetime" should be placed before "from django.db import models"
+  Line: 5
+    pylint: unused-import / Unused slugify imported from django.template.defaultfilters
+  Line: 10
+    pep8: E302 / expected 2 blank lines, found 1 (col 1)
+    pylint: model-missing-unicode / No __unicode__ method on model (Event)
+  Line: 11
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: E221 / multiple spaces before operator (col 7)
+    pylint: bad-whitespace / Exactly one space required before assignment
+	title  = models.CharField(max_length=255)
+        ^
+  Line: 12
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 13
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 14
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 15
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 16
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 17
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 18
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 19
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: W293 / blank line contains whitespace (col 1)
+  Line: 20
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 21
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 23
+    pep8: E302 / expected 2 blank lines, found 1 (col 1)
+    pylint: model-missing-unicode / No __unicode__ method on model (UserProfile)
+  Line: 25
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 26
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 27
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 28
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 29
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 30
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 31
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: E501 / line too long (110 > 99 characters) (col 100)
+  Line: 32
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 33
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 35
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: E226 / missing whitespace around arithmetic operator (col 77)
+    pep8: E231 / missing whitespace after ',' (col 47)
+  Line: 36
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: E231 / missing whitespace after ',' (col 25)
+  Line: 38
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: E501 / line too long (108 > 99 characters) (col 100)
+    pep8: E231 / missing whitespace after ',' (col 71)
+  Line: 40
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 41
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 42
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 43
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: E221 / multiple spaces before operator (col 12)
+    pep8: E231 / missing whitespace after ',' (col 43)
+  Line: 44
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 46
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 47
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 48
+    pylint: trailing-newlines / Trailing newlines
+
+userprofiles/tokens.py
+  Line: 6
+    pylint: no-self-use / Method could be a function (col 4)
+  Line: 11
+    pep8: E305 / expected 2 blank lines after class or function definition, found 0 (col 1)
+    pylint: invalid-name / Constant name "account_activation_token" doesn't conform to UPPER_CASE naming style
+
+userprofiles/urls.py
+  Line: 1
+    pylint: import-error / Unable to import 'django.urls'
+  Line: 4
+    pylint: wrong-import-order / third party import "from django.contrib.auth import views as auth_views" should be placed before "from . import views"
+  Line: 8
+    pep8: E303 / too many blank lines (3) (col 1)
+  Line: 22
+    pep8: E501 / line too long (162 > 99 characters) (col 100)
+  Line: 25
+    pep8: E501 / line too long (132 > 99 characters) (col 100)
+  Line: 28
+    pep8: W293 / blank line contains whitespace (col 1)
+
+userprofiles/views.py
+  Line: None
+    pep8: E101 / indentation contains mixed spaces and tabs (col 1)
+  Line: 2
+    pep8: W191 / indentation contains tabs (col 1)
+    pylint: unused-import / Unused import urllib2 (col 1)
+  Line: 3
+    pylint: bare-except / No exception type(s) specified
+  Line: 4
+    pep8: W191 / indentation contains tabs (col 1)
+    pylint: unused-import / Unused urllib.request imported as urllib2 (col 1)
+  Line: 5
+    pylint: unused-import / Unused import urllib
+  Line: 6
+    pylint: unused-import / Unused import json
+  Line: 8
+    pylint: unused-import / Unused get_object_or_404 imported from django.shortcuts
+  Line: 10
+    pep8: E203 / whitespace before ',' (col 52)
+    pep8: E231 / missing whitespace after ',' (col 53)
+  Line: 13
+    pylint: import-error / Unable to import 'django.urls'
+    pylint: unused-import / Unused reverse_lazy imported from django.urls
+  Line: 14
+    pylint: unused-import / Unused ValidationError imported from django.core.exceptions
+  Line: 15
+    pylint: import-error / Unable to import 'django.contrib.auth.mixins'
+    pylint: unused-import / Unused LoginRequiredMixin imported from django.contrib.auth.mixins
+  Line: 16
+    pylint: unused-import / Unused timezone imported from django.utils
+  Line: 17
+    pylint: unused-import / Unused settings imported from django.conf
+  Line: 24
+    pylint: wrong-import-order / standard import "from datetime import datetime" should be placed before "from django.shortcuts import render, redirect, get_object_or_404"
+  Line: 25
+    pylint: reimported / Reimport 'login_required' (imported line 9)
+    pyflakes: F811 / redefinition of unused 'login_required' from line 9 (col 1)
+  Line: 29
+    pylint: wrong-import-order / third party import "from django.contrib.auth import update_session_auth_hash" should be placed before "from .forms import UserForm, UserProfileForm, UserProfileEditForm"
+  Line: 30
+    pylint: wrong-import-order / third party import "from django.contrib.auth.forms import PasswordChangeForm" should be placed before "from .forms import UserForm, UserProfileForm, UserProfileEditForm"
+  Line: 34
+    pep8: E303 / too many blank lines (3) (col 1)
+  Line: 36
+    pep8: E302 / expected 2 blank lines, found 3 (col 1)
+  Line: 37
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 41
+    pep8: W191 / indentation contains tabs (col 1)
+    pylint: no-else-return / Unnecessary "else" after "return" (col 1)
+  Line: 43
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 44
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 46
+    pep8: W191 / indentation contains tabs (col 1)
+    pylint: too-many-function-args / Too many positional arguments for function call (col 9)
+  Line: 48
+    pep8: W191 / indentation contains tabs (col 1)
+    pylint: no-else-return / Unnecessary "else" after "return" (col 2)
+  Line: 50
+    pep8: W191 / indentation contains tabs (col 1)
+    pylint: no-else-return / Unnecessary "else" after "return" (col 3)
+  Line: 51
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 52
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 53
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 54
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 55
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 56
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 58
+    pep8: W191 / indentation contains tabs (col 1)
+    pylint: no-else-return / Unnecessary "else" after "return" (col 4)
+  Line: 59
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 61
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 62
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 64
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 65
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 67
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 68
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: E231 / missing whitespace after ':' (col 51)
+  Line: 70
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 71
+    pep8: W191 / indentation contains tabs (col 1)
+    pylint: no-else-return / Unnecessary "else" after "return" (col 2)
+  Line: 72
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 73
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 74
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: E231 / missing whitespace after ',' (col 39)
+  Line: 92
+    pep8: E302 / expected 2 blank lines, found 1 (col 1)
+  Line: 94
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 95
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: E231 / missing whitespace after ':' (col 50)
+  Line: 97
+    pep8: E302 / expected 2 blank lines, found 1 (col 1)
+  Line: 98
+    pep8: N802 / function name should be lowercase (col 5)
+    pylint: invalid-name / Function name "userDash" doesn't conform to snake_case naming style
+  Line: 99
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 100
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 101
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: E203 / whitespace before ':' (col 10)
+  Line: 102
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: E203 / whitespace before ':' (col 11)
+  Line: 103
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 104
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 105
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 108
+    pep8: N802 / function name should be lowercase (col 5)
+    pylint: invalid-name / Function name "viewEvent" doesn't conform to snake_case naming style
+  Line: 109
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 110
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 111
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: W293 / blank line contains whitespace (col 1)
+  Line: 112
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 113
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 114
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: W293 / blank line contains whitespace (col 1)
+  Line: 115
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: E203 / whitespace before ':' (col 53)
+  Line: 119
+    pep8: N802 / function name should be lowercase (col 5)
+    pylint: invalid-name / Function name "registerForEvent" doesn't conform to snake_case naming style
+  Line: 121
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 122
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 123
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 124
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 125
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 127
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 128
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 130
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 132
+    pep8: E302 / expected 2 blank lines, found 1 (col 1)
+  Line: 133
+    pep8: N802 / function name should be lowercase (col 5)
+    pylint: invalid-name / Function name "unregisterForEvent" doesn't conform to snake_case naming style
+  Line: 135
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 136
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 137
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 138
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 139
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 141
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 143
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 145
+    pep8: E302 / expected 2 blank lines, found 1 (col 1)
+  Line: 146
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 147
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 148
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 149
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: W293 / blank line contains whitespace (col 1)
+  Line: 150
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 151
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 152
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 154
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: E203 / whitespace before ':' (col 54)
+    pylint: bad-whitespace / No space allowed before :
+		if user_form.is_valid() and profile_form.is_valid() :
+                                                      ^
+  Line: 156
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 157
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 158
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 160
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 161
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 162
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 163
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 164
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 165
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: E128 / continuation line under-indented for visual indent (col 10)
+  Line: 166
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: E124 / closing bracket does not match visual indentation (col 7)
+  Line: 167
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 168
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 170
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 172
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 173
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 174
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 175
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 176
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 177
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: W293 / blank line contains whitespace (col 1)
+  Line: 178
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: E501 / line too long (139 > 99 characters) (col 100)
+    pep8: E231 / missing whitespace after ':' (col 73)
+  Line: 182
+    pep8: E303 / too many blank lines (3) (col 1)
+  Line: 184
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 185
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 186
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 187
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 188
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 189
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 190
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 191
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 192
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 193
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 194
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 195
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: E501 / line too long (153 > 99 characters) (col 100)
+    pep8: E231 / missing whitespace after ':' (col 68)
+  Line: 196
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 197
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 198
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 199
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 201
+    pep8: E302 / expected 2 blank lines, found 1 (col 1)
+  Line: 203
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 204
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 205
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 206
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 207
+    pep8: W191 / indentation contains tabs (col 1)
+    pylint: bare-except / No exception type(s) specified (col 1)
+  Line: 208
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: E225 / missing whitespace around operator (col 15)
+  Line: 209
+    pep8: W191 / indentation contains tabs (col 1)
+    pylint: no-else-return / Unnecessary "else" after "return" (col 1)
+  Line: 210
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 211
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 212
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 213
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 214
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 216
+    pep8: E302 / expected 2 blank lines, found 1 (col 1)
+  Line: 217
+    pep8: N802 / function name should be lowercase (col 5)
+    pylint: invalid-name / Function name "userProfileEdit" doesn't conform to snake_case naming style
+  Line: 218
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 219
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 220
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 221
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 222
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 223
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 224
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 225
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 226
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: E501 / line too long (100 > 99 characters) (col 100)
+    pep8: E231 / missing whitespace after ':' (col 62)
+  Line: 230
+    pep8: N802 / function name should be lowercase (col 5)
+    pylint: invalid-name / Function name "EventList" doesn't conform to snake_case naming style
+  Line: 231
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 232
+    pep8: W191 / indentation contains tabs (col 1)
+    pep8: E203 / whitespace before ':' (col 11)
+  Line: 233
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 234
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 238
+    pep8: N802 / function name should be lowercase (col 5)
+    pylint: invalid-name / Function name "EventUsers" doesn't conform to snake_case naming style
+  Line: 239
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 240
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 241
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 242
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 243
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 245
+    pep8: W191 / indentation contains tabs (col 1)
+  Line: 246
+    pylint: trailing-newlines / Trailing newlines
+
+
+
+Check Information
+=================
+         Started: 2018-11-24 21:13:53.388224
+        Finished: 2018-11-24 21:14:11.833364
+      Time Taken: 18.45 seconds
+       Formatter: grouped
+        Profiles: default, strictness_high, strictness_veryhigh, no_doc_warnings, no_test_warnings, no_member_warnings
+      Strictness: high
+  Libraries Used: django
+       Tools Run: dodgy, mccabe, pep8, profile-validator, pyflakes, pylint
+  Messages Found: 559
+
